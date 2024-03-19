@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 def dashboard():
-    st.title('FINDataX Admin Dashboard')
+    st.title('Welcome to your FINANCEDataX Administrator Dashboard')
 
     st.write('## Navigation')
     menu_options = ['Transactions', 'Accounts']
