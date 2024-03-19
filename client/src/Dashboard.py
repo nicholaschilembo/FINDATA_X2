@@ -70,7 +70,7 @@ def create_random_accounts():
     st.write('### Valid Accounts:')
     for account in valid_accounts:
         if account['status'] == 'valid':
-            if st.button(f'Generate Smart Contract for Account Number {account["account_number"]}', key=f'acc_{account["account_number"]}', help=f'Account Number {account["account_number"]} is valid. Click to generate smart contract', class_='btn btn-success'):
+            if st.button(f'Generate Smart Contract for Account Number {account["account_number"]}'):
                 generate_smart_contract(account)
         else:
             st.write(f'Account Number {account["account_number"]} is invalid. Reason: {account["reason"]}')
