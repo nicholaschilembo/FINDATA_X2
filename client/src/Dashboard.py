@@ -1,19 +1,6 @@
 import streamlit as st
 import random
 
-# Setting the page background color to navy blue
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: #0B1929;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 def dashboard():
     st.title('FINDataX Admin Dashboard')
 
@@ -85,6 +72,4 @@ def generate_smart_contract(data):
     st.success('Smart contract generated successfully!')
 
 if __name__ == '__main__':
-    # Adding intro line
-    st.markdown('<h1 style="color: red;">Welcome MZANSIWEB3 to your FINData X platform</h1>', unsafe_allow_html=True)
     dashboard()
