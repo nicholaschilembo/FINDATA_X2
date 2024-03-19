@@ -15,21 +15,21 @@ st.markdown(
 )
 
 def dashboard():
-    st.title('FINDataX Admin Dashboard')
+    st.title('FINDATAX ADMINISTRATOR DASHBOARD')
 
     st.write('## Navigation')
     menu_options = ['Transactions', 'Accounts']
     selected_option = st.selectbox('Select a page', menu_options)
 
     if selected_option == 'Transactions':
-        if st.button('Show Random Transactions'):
+        if st.button('Show Transactions'):
             display_transactions()
     elif selected_option == 'Accounts':
-        if st.button('Create Random Accounts'):
+        if st.button('Create Accounts'):
             create_random_accounts()
 
 def display_transactions():
-    st.title('Random Transactions')
+    st.title('Todays Transactions')
     
     transactions = generate_random_transactions()
     
@@ -52,7 +52,7 @@ def generate_random_transactions():
     return transactions
 
 def create_random_accounts():
-    st.title('Random Accounts Created')
+    st.title('Accounts Created')
     valid_accounts = []
     invalid_accounts = []
 
