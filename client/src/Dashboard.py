@@ -12,7 +12,7 @@ def dashboard():
         if st.button('Go to Transactions Page'):
             display_transactions()
     elif selected_option == 'Accounts':
-        if st.button('Create Random Accounts'):
+        if st.button('Display Bank Accounts'):
             create_random_accounts()
 
 def display_transactions():
