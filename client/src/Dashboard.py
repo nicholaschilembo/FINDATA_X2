@@ -1,22 +1,22 @@
-import streamlit as st
+cimport streamlit as st
 import random
 
 def dashboard():
-    st.title('FINDataX Admin Dashboard')
+    st.title('Welcome MZANSI WEB3 to your FINDataX Adminstrator Dashboard')
 
     st.write('## Navigation')
     menu_options = ['Transactions', 'Accounts']
     selected_option = st.selectbox('Select a page', menu_options)
 
     if selected_option == 'Transactions':
-        if st.button('Show Random Transactions'):
+        if st.button('Display Transactions'):
             display_transactions()
     elif selected_option == 'Accounts':
-        if st.button('Create Random Accounts'):
+        if st.button('Display Accounts'):
             create_random_accounts()
 
 def display_transactions():
-    st.title('Random Transactions')
+    st.title('Transactions as of today')
     
     transactions = generate_random_transactions()
     
@@ -39,7 +39,7 @@ def generate_random_transactions():
     return transactions
 
 def create_random_accounts():
-    st.title('Random Accounts Created')
+    st.title('RAccounts as of today')
     valid_accounts = []
     invalid_accounts = []
 
