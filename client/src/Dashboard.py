@@ -20,7 +20,7 @@ def display_transactions():
     # Add code to display transactions here
 
 def create_random_accounts():
-    st.title('Random Accounts Created')
+    st.title('FINDataX Accounts')
     valid_accounts = []
     invalid_accounts = []
 
