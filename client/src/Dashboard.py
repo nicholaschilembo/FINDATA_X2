@@ -23,8 +23,8 @@ def display_transactions():
     st.write('### Transactions:')
     for txn in transactions:
         if txn['status'] == 'valid':
-            if st.button(f'Generate Smart Contract for Transaction ID {txn["id"]}'):
-                st.write(f'Smart contract generated for Transaction ID {txn["id"]}')
+            if st.button(f'Generate Smart Contract for Transaction ID {txn["id"]}', key=f'txn_{txn["id"]}', help=f'Transaction ID {txn["id"]} is valid. Click to generate smart contract'):
+                generate_smart_contract(txn)
         else:
             st.write(f'Transaction ID {txn["id"]} is invalid. Reason: {txn["reason"]}')
 
@@ -57,14 +57,19 @@ def create_random_accounts():
     st.write('### Valid Accounts:')
     for account in valid_accounts:
         if account['status'] == 'valid':
-            if st.button(f'Generate Smart Contract for Account Number {account["account_number"]}'):
-                st.write(f'Smart contract generated for Account Number {account["account_number"]}')
+            if st.button(f'Generate Smart Contract for Account Number {account["account_number"]}', key=f'acc_{account["account_number"]}', help=f'Account Number {account["account_number"]} is valid. Click to generate smart contract', class_='btn btn-success'):
+                generate_smart_contract(account)
         else:
             st.write(f'Account Number {account["account_number"]} is invalid. Reason: {account["reason"]}')
 
     st.write('### Invalid Accounts:')
     for account in invalid_accounts:
         st.write(f'Account Number {account["account_number"]} is invalid. Reason: {account["reason"]}')
+
+def generate_smart_contract(data):
+    # Here you would generate the immutable document with the provided data
+    st.write(f'Generated Smart Contract for {data}')
+    st.success('Smart contract generated successfully!')
 
 if __name__ == '__main__':
     dashboard()
