@@ -23,7 +23,7 @@ def display_transactions():
     st.write('### Transactions:')
     for txn in transactions:
         if txn['status'] == 'valid':
-            if st.button(f'Generate Smart Contract for Transaction ID {txn["id"]}', key=f'txn_{txn["id"]}', help=f'Transaction ID {txn["id"]} is valid. Click to generate smart contract'):
+            if st.button(f'Generate Smart Contract for Transaction ID {txn["id"]}', key=f'txn_{txn["id"]}', help=f'Transaction ID {txn["id"]} is valid. Click to generate smart contract', class_='btn btn-success'):
                 generate_smart_contract(txn)
         else:
             st.write(f'Transaction ID {txn["id"]} is invalid. Reason: {txn["reason"]}')
