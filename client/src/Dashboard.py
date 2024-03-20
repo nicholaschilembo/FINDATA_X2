@@ -1,8 +1,12 @@
 import streamlit as st
 import random
+import tempfile
 
-# Minimalistic theme with light background and dark text
-st.set_page_config(page_title="FINDataX Admin", page_config={"layout": "wide"})
+# Blue and white theme configuration
+st.set_page_config(
+    page_title="FINDataX Admin",
+    page_config={"layout": "wide", "backgroundColor": "#e0e8f8", "textColor": "#212529"},
+)
 
 # Placeholder user data (replace with your authentication method)
 users = [
@@ -87,6 +91,4 @@ def create_random_accounts():
         account_number = ''.join(random.choices('0123456789', k=8))
         valid_accounts.append({'account_number': account_number, 'status': 'valid'})
 
-    # Create 5 invalid accounts
-    for i in range(5):
-        account_number = ''.join(random.choices('0123456789', k=8
+    # Create
