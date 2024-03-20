@@ -89,5 +89,4 @@ def create_random_accounts():
 
     # Create 5 invalid accounts
     for i in range(5):
-        account_number = ''.join(random.choices('0123456789', k=8))
-        reason = random.choice
+        account_number = ''.join(random.choices('0123456789', k=8
